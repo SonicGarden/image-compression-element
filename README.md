@@ -66,11 +66,6 @@ ImageCompression.defaultOptions = {
 };
 ```
 
-## dependencies
-
-This custom element has no dependencies.
-The `browser-image-compression` library is dynamically imported from a CDN.
-
 ## License
 
 Distributed under the MIT license.

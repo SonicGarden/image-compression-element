@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      browser-image-compression:
+        specifier: ^2.0.2
+        version: 2.0.2
     devDependencies:
       '@github/prettier-config':
         specifier: ^0.0.6
@@ -17,9 +21,6 @@ importers:
       '@web/dev-server-esbuild':
         specifier: ^1.0.2
         version: 1.0.2
-      browser-image-compression:
-        specifier: ^2.0.2
-        version: 2.0.2
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
