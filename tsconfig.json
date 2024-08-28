@@ -2,7 +2,11 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "es2017",
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom",
+      "DOM.Iterable"
+    ],
     "strict": true,
     "declaration": true,
     "outDir": "dist",
