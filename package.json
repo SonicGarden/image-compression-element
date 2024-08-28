@@ -1,11 +1,11 @@
 {
   "name": "@sonicgarden/image-compression-element",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A custom element for compressing image files.",
   "main": "dist/image-compression.js",
   "module": "dist/image-compression.js",
   "type": "module",
-  "types": "dist/image-compressions.d.ts",
+  "types": "dist/image-compression.d.ts",
   "license": "MIT",
   "repository": "SonicGarden/image-compression-element",
   "files": [
