@@ -25,9 +25,13 @@ const filesToFileList = (files: readonly File[]): FileList => {
   return dt.files
 }
 
-const imageCompressionByFileList = async (files: FileList, options: Options = {}): Promise<FileList> => {
+const importImageCompression = async () => {
   // eslint-disable-next-line import/extensions, import/no-unresolved
-  const imageCompression = (await import('https://esm.run/browser-image-compression@2.0.2')).default
+  return (await import('https://esm.run/browser-image-compression@2.0.2')).default
+}
+
+const imageCompressionByFileList = async (files: FileList, options: Options = {}): Promise<FileList> => {
+  const imageCompression = await importImageCompression()
   const promises = [...files].map(file => {
     return isSupportedImageCompression(file) ? imageCompression(file, options) : file
   })
@@ -48,6 +52,8 @@ export class ImageCompression extends HTMLElement {
 
   connectedCallback() {
     this.addEventListener('change', this.onChange)
+    // NOTE: preload
+    importImageCompression()
   }
 
   disconnectedCallback(): void {
